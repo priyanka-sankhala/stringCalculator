@@ -5,7 +5,7 @@ const extractDelimiters = (input: string): number[] => {
     const delimiter = input.substring(2, input.indexOf("\n"));
     const skipCount = 4 + delimiter.length;
 
-    //skip
+    //skip initial char which definded the delimiter
     return numbers
       .substring(skipCount - 1)
       .split(delimiter)
